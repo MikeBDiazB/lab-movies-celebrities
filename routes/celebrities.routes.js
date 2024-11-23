@@ -1,3 +1,5 @@
+const router = require("express").Router();
+
 const Celebrity = require('../models/Celebrity.model');
 
 // Render the create celebrity form
@@ -18,4 +20,4 @@ router.get('/', (req, res) => {
       .then((celebrities) => res.render('celebrities/celebrities', { celebrities }))
       .catch((err) => console.error(err));
   });
-  
+  module.exports = router;
